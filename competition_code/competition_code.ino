@@ -14,7 +14,7 @@ int value, rgb_value;
 char dev;
 char dir;
 
-unsigned long time;
+unsigned long due_time;
 
 int myparseInt(){
   char buffer[MAX_CHAR], tmp;
@@ -33,7 +33,7 @@ void setup(){
 }
 
 void loop(){
-  if (millis() > time){
+  if (millis() > due_time){
     if (rgb_value == 0){
       car.setRGB(OFF);
       led_status = false; 
@@ -44,7 +44,7 @@ void loop(){
         car.setRGB(rgb_color);
         rgb_value--;
       }
-      time = millis()+1000;
+      due_time = millis()+1000;
       
       led_status = !led_status;
     }
@@ -89,7 +89,7 @@ void loop(){
       }
       rgb_value = value;
       car.setRGB(rgb_color);
-      time = millis()+1000;
+      due_time = millis()+1000;
       rgb_value--;
       led_status = true;
     }
