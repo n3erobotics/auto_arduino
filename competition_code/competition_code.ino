@@ -28,7 +28,7 @@ void setup(){
   Serial.begin(115200);
   //Serial.println("Iniciar");
   car.attachMotor(6,5);
-  car.attachServo(9);
+  car.attachServo(2);
   car.attachRGB(3,10,11);
 }
 
