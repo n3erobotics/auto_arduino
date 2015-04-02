@@ -16,7 +16,7 @@
 class Car
 {
 	public:
-		void attachMotor(int8_t pin1, int8_t pin2);	
+		void attachMotor(int8_t pin);	
 		void attachServo(int8_t pin);
 		void attachSensor(int8_t pin);
 		void setSpeed(int direction, int speed);
