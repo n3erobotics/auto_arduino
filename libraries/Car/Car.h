@@ -21,12 +21,12 @@ class Car
 		void attachSensor(int8_t pin);
 		void setSpeed(int direction, int speed);
 		void turn(int diretion, int degrees);
-        void attachRGB(int8_t pinR, int8_t pinG, int8_t pinB);
+        	void attachRGB(int8_t pinR, int8_t pinG, int8_t pinB);
 		void setRGB(int color);
 	private:
 		Motor _motor;
 		Servo _servo;
-        RGB _rgb;
+        	RGB _rgb;
 };
 
 #endif
