@@ -3,11 +3,12 @@
   Created by Ruben Capitao, 2 March 2014.
 */
 
+#include "Arduino.h"
 #include "Motor.h"
 
-void Motor::attach(int pin1)
+void Motor::attach(int pin)
 {
-  _motor.attach(pin1);
+  _motor.attach(pin);
 }
 
 void Motor::setSpeed(int dir, int speed)
