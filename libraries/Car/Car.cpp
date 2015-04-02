@@ -13,25 +13,27 @@ volatile boolean state=LOW;
 
 static void sensorISR()
 {
-  if(digitalRead(A0)!=state){
-  	state=!state;
-  }
+	if(digitalRead(A0)!=state){
+		state=!state;
+		
+	}
   	
 }
 
-void Car::attachMotor(int8_t pin1, int8_t pin2)
+void Car::attachMotor(int8_t pin)
 {
-	_motor.attach(pin1, pin2);
+	_motor.attach(pin);
 }
 	
 void Car::attachServo(int8_t pin){
-  _servo.attach(pin);
+	_servo.attach(pin);
 }
 
 void Car::setSpeed(int direction, int speed)
 {
 	_motor.setSpeed(direction, speed);
 }
+
 void Car::turn(int diretion, int degrees)
 {
 	if(degrees>65)
@@ -45,15 +47,15 @@ void Car::turn(int diretion, int degrees)
 void Car::attachSensor(int8_t pin)
 {
 	digitalWrite (2, HIGH);  // pull-up
-	attachInterrupt(pin, reinterpret_cast<void (*)()>(&sensorISR), CHANGE);
+	attachInterrupt(pin, reinterpret_cast<void (*)()>(&sensorISR), RISING);
 }
 
 void Car::attachRGB(int8_t pinR, int8_t pinG, int8_t pinB){
-  _rgb.attach(pinR, pinG, pinB);
+	_rgb.attach(pinR, pinG, pinB);
 }
 
 void Car::setRGB(int color){
-  _rgb.setColor(color);
+	_rgb.setColor(color);
 }
 
 
