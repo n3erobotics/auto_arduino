@@ -3,21 +3,18 @@
   Created by Ruben Capitao, 2 March 2014.
 */
 
-#include "Arduino.h"
 #include "Motor.h"
 
 void Motor::attach(int pin1)
 {
-  _pin1 = pin1;
+  _motor.attach(pin1);
 }
 
 void Motor::setSpeed(int dir, int speed)
 {
   if(dir){
-    analogWrite(_pin1, speed);
-    analogWrite(_pin2, 0);
+    myservo.writeMicroseconds(MICROS_TO_FORWARD+speed);
   }else{
-    analogWrite(_pin2, speed);
-    analogWrite(_pin1, 0);
+    myservo.writeMicroseconds(MICROS_TO_BACKWARD+speed);
   }
 }
