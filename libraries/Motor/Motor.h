@@ -19,7 +19,7 @@ class Motor
     void attach(int pin1);
     void setSpeed(int dir, int speed);
   private:
-    int _pin1, _pin2;
+    Servo _motor;
 };
 
 #endif
