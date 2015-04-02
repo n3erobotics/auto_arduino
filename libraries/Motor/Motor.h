@@ -16,7 +16,7 @@
 class Motor
 {
   public:
-    void attach(int pin1);
+    void attach(int pin);
     void setSpeed(int dir, int speed);
   private:
     Servo _motor;
