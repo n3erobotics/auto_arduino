@@ -13,7 +13,7 @@
 class Motor
 {
   public:
-    void attach(int pin1, int pin2);
+    void attach(int pin1);
     void setSpeed(int dir, int speed);
   private:
     int _pin1, _pin2;
