@@ -7,8 +7,11 @@
 
 #define FORWARD 0
 #define BACKWARD 1
+#define MICROS_TO_FOWARD 1580
+#define MICROS_TO_BACKWARD 1580
 
 #include "Arduino.h"
+#include "Servo.h
 
 class Motor
 {
