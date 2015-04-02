@@ -6,10 +6,9 @@
 #include "Arduino.h"
 #include "Motor.h"
 
-void Motor::attach(int pin1, int pin2)
+void Motor::attach(int pin1)
 {
   _pin1 = pin1;
-  _pin2 = pin2;
 }
 
 void Motor::setSpeed(int dir, int speed)
