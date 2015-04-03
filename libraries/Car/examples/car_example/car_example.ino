@@ -6,7 +6,7 @@ Car car;
 void setup(){
   Serial.begin(115200);
   Serial.println("Connected!");
-  car.attachMotor(6,5);
+  car.attachMotor(6);
   car.attachServo(9);
   car.attachEncoder(0);
 }
