@@ -8,7 +8,7 @@ int value;
 void setup(){
   Serial.begin(115200);
   Serial.println("Connected!");
-  car.attachMotor(5,6);
+  car.attachMotor(5);
   car.attachServo(9);
   car.attachEncoder(0);
 }
